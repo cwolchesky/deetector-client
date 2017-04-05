@@ -1,14 +1,20 @@
-var http = require('http');
+var request = require('request');
 var config = require('./config.json');
 
 function check_api() {
-    http.get('http://' + config.API_HOST + ':2017/', function(res) {
-        if (res.statusCode == 200) {
-            return true;
-        } else {
-            return false;
+    var success = false;
+    request('http://' + config.API_HOST + ":" config.API_PORT, function(error, response, body) {
+        if (response.statusCode == 200) {
+        success = true;
         }
-    })
+    });
+    return success;
+};
+
+if (check_api() == true) {
+    console.log("Found API at http://" + config.API_HOST + ":" config.API_PORT);
+} else {
+    throw new FatalError("Did not find API!");
 }
 
 module.exports.check_api = check_api;
