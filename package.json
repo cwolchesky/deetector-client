@@ -1,0 +1,21 @@
+{
+  "name": "deetector-client",
+  "version": "0.0.1",
+  "description": "Client script for deetector",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Chris Wolchesky",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "noble": "^1.8.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
