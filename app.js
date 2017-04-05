@@ -14,7 +14,7 @@ function check_api() {
 if (check_api() == true) {
     console.log("Found API at http://" + config.API_HOST + ":" + config.API_PORT);
 } else {
-    throw new FatalError("Did not find API!");
+    throw new Error("Did not find API!");
 }
 
 module.exports.check_api = check_api;
