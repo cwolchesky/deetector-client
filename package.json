@@ -13,9 +13,7 @@
     "mocha": "^3.2.0"
   },
   "dependencies": {
-    "noble": "^1.8.0"
-  },
-  "scripts": {
-    "test": "mocha"
+    "noble": "^1.8.0",
+    "request": "^2.81.0"
   }
 }
