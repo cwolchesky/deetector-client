@@ -3,7 +3,7 @@ var config = require('./config.json');
 
 function check_api() {
     var success = false;
-    request('http://' + config.API_HOST + ":" config.API_PORT, function(error, response, body) {
+    request('http://' + config.API_HOST + ":" + config.API_PORT, function(error, response, body) {
         if (response.statusCode == 200) {
         success = true;
         }
@@ -12,7 +12,7 @@ function check_api() {
 };
 
 if (check_api() == true) {
-    console.log("Found API at http://" + config.API_HOST + ":" config.API_PORT);
+    console.log("Found API at http://" + config.API_HOST + ":" + config.API_PORT);
 } else {
     throw new FatalError("Did not find API!");
 }
