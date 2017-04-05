@@ -14,6 +14,7 @@ describe('client', function() {
     });
 
     describe('Initial Checks', function() {
+        var config = require('../config.json');
         var check_api = require('../app').check_api;
 
         it('verified the presence of the remote API', function() {
